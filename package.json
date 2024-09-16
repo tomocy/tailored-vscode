@@ -14,8 +14,92 @@
   "contributes": {
     "commands": [
       {
-        "command": "tailored-vscode.helloWorld",
-        "title": "Hello World"
+        "title": "Tailored VSCode: Cursor: Move to page start",
+        "command": "tailored-vscode.cursor.moveToPageStart"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move to page end",
+        "command": "tailored-vscode.cursor.moveToPageEnd"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move up by lines",
+        "command": "tailored-vscode.cursor.moveUpByLine"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move down by lines",
+        "command": "tailored-vscode.cursor.moveDownByLine"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move to line start",
+        "command": "tailored-vscode.cursor.moveToLineStart"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move to line end",
+        "command": "tailored-vscode.cursor.moveToLineEnd"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move left by word",
+        "command": "tailored-vscode.cursor.moveLeftByWord"
+      },
+      {
+        "title": "Tailored VSCode: Cursor: Move right by word",
+        "command": "tailored-vscode.cursor.moveRightByWord"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+up",
+        "mac": "cmd+up",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveToPageStart"
+      },
+      {
+        "key": "ctrl+down",
+        "mac": "cmd+down",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveToPageEnd"
+      },
+      {
+        "key": "alt+up",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveUpByLine",
+        "args": [
+          {
+            "n": 10
+          }
+        ]
+      },
+      {
+        "key": "alt+down",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveDownByLine",
+        "args": [
+          {
+            "n": 10
+          }
+        ]
+      },
+      {
+        "key": "ctrl+left",
+        "mac": "cmd+left",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveToLineStart"
+      },
+      {
+        "key": "ctrl+right",
+        "mac": "cmd+right",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveToLineEnd"
+      },
+      {
+        "key": "alt+left",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveLeftByWord"
+      },
+      {
+        "key": "alt+right",
+        "when": "editorFocus",
+        "command": "tailored-vscode.cursor.moveRightByWord"
       }
     ]
   },
